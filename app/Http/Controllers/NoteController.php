@@ -54,4 +54,18 @@ class NoteController extends Controller
         NoteModel::where("user_id", '=', Auth::user()->id)->delete();
         return redirect('/');
     }
+
+    public function toggledone(Request $request, $note_id)
+    {
+        $note = NoteModel::findOrFail($note_id);
+
+        if ($note->isdone == 0)
+            $note->isdone = 1;
+        else
+            $note->isdone = 0;
+
+        $note->save();
+
+        return redirect('/');
+    }
 }

@@ -21,6 +21,7 @@ Route::post('/store', [NoteController::class, 'store']);
 Route::post('/update/{note_id}', [NoteController::class, 'update']);
 Route::get('/destroy/{note_id}', [NoteController::class, 'destroy']);
 Route::get('/clear', [NoteController::class, 'clear']);
+Route::post('/done/{note_id}', [NoteController::class, 'toggledone']);
 
 Auth::routes();
 

@@ -14,24 +14,37 @@
 
     <br>
     @forelse ($notes as $note)
-        <span>{{ $note->title }}</span>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update-modal">
+        <input type="checkbox" id="task-{{ $note->id }}-cb" onclick="isdone({{ $note->id }});"
+            {{ $note->isdone == 1 ? 'checked' : '' }} />
+        <span for="task-{{ $note->id }}-cb" class="strikethrough">{{ $note->title }}</span>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#update-modal-{{ $note->id }}">
             Edit
         </button>
         @include('modals.update')
 
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-modal">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#delete-modal-{{ $note->id }}">
             Delete
         </button>
         @include('modals.delete')
+        <br>
     @empty
         <div>no task</div>
     @endforelse
 @endsection
 
 <script>
-    // jquery post for done
+    function isdone(note_id) {
+        console.log(1);
+        $.ajax({
+            type: "POST",
+            url: "/done/" + note_id,
+            data: {
+                "_token": "{{ csrf_token() }}",
+            },
+            success: function(result) {}
+        });
+    }
 </script>

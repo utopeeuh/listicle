@@ -1,5 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="update-modal-label" aria-hidden="true">
+<div class="modal fade" id="delete-modal-{{ $note->id }}" tabindex="-1" aria-labelledby="update-modal-label"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

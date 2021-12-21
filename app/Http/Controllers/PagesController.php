@@ -17,7 +17,9 @@ class PagesController extends Controller
 
     public function index()
     {
-        $notes = Auth::user()->notes;
+        $notes = NoteModel::where("user_id", "=", Auth::user()->id)
+            ->orderByRaw("FIELD(priority, \"high\", \"medium\", \"low\")")->get();
+        // $notes = Auth::user()->notes;
         return view('index', ['notes' => $notes]);
     }
 }
