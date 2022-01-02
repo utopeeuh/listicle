@@ -1,43 +1,61 @@
 @extends('layouts.master')
 @section('content')
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
-        Add new task
-    </button>
 
     @include('modals.create')
-
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clear-modal">
-        Clear all
-    </button>
     @include('modals.clear')
 
-    <br>
-    @forelse ($notes as $note)
-        <input type="checkbox" id="task-{{ $note->id }}-cb" onclick="isdone({{ $note->id }});"
-            {{ $note->isdone == 1 ? 'checked' : '' }} />
-        <span for="task-{{ $note->id }}-cb" class="strikethrough">{{ $note->title }}</span>
+    <div class="container p-5">
+        @if ($notes->count() > 0)
+            <div class="row justify-content-center align-items-center mb-4">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
+                        Add new task
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clear-modal">
+                        Clear all
+                    </button>
+                </div>
+            </div>
+        @endif
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#update-modal-{{ $note->id }}">
-            Edit
-        </button>
-        @include('modals.update')
+        @forelse ($notes as $note)
+            <div class="row justify-content-center align-items-center mb-1">
+                <div for="task-{{ $note->id }}-cb" class="task task-{{ $note->priority }} col-md-4 align-items-center">
+                    <input type="checkbox" id="task-{{ $note->id }}-cb" onclick="isdone({{ $note->id }});"
+                        {{ $note->isdone == 1 ? 'checked' : '' }} />
+                    <span class="st"> {{ $note->title }}</span>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#update-modal-{{ $note->id }}">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#delete-modal-{{ $note->id }}">
+                        Delete
+                    </button>
+                </div>
+            </div>
+            @include('modals.update')
+            @include('modals.delete')
+        @empty
 
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-            data-bs-target="#delete-modal-{{ $note->id }}">
-            Delete
-        </button>
-        @include('modals.delete')
-        <br>
-    @empty
-        <div>no task</div>
-    @endforelse
+            <div class="d-flex flex-column align-items-center justify-content-center" style="height: 40%">
+                <div class="no-task mb-2 text-center">
+                    No tasks found, start by<br>clicking the button below
+                </div>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
+                    Add new task
+                </button>
+
+            </div>
+        @endforelse
+    </div>
 @endsection
 
 <script>
     function isdone(note_id) {
-        console.log(1);
         $.ajax({
             type: "POST",
             url: "/done/" + note_id,

@@ -1,3 +1,108 @@
-input[type="checkbox"]:checked + span.strikethrough {
-    text-decoration: line-through;
+* {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+        serif;
 }
+
+body {
+    background-color: #262a33 !important;
+}
+
+input[type="checkbox"]:checked ~ span.st {
+    text-decoration: line-through;
+    color: #d5dfe0;
+    transition: 0.5s ease-in-out;
+}
+
+input[type="checkbox"] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+    margin-right: 10px;
+}
+
+.vertical-alignment-helper {
+    display: table;
+    height: 60%;
+    width: 100%;
+    pointer-events: none;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events: none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width: inherit;
+    max-width: inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height: inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.form-group > label {
+    margin-bottom: 0.5rem;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn {
+    transition: 0.2s ease-in-out;
+    outline: none !important;
+}
+
+.btn-primary {
+    background-color: #34ffb1;
+    color: #262a33;
+}
+
+.btn-primary:hover {
+    background-color: #24b37c;
+    color: #262a33;
+}
+
+.btn-danger {
+    color: red;
+    background-color: #262a33;
+}
+
+.no-task {
+    font-size: 1.4rem;
+    color: #454f64;
+}
+
+.task {
+    font-size: 1.2rem;
+}
+
+.task-low {
+    color: #1a8059;
+}
+
+.task-medium {
+    color: #24b37c;
+}
+
+.task-high {
+    color: #34ffb1;
+}
+
+/*
+custom checkbox
+https://stackoverflow.com/questions/44279398/customize-bootstrap-checkboxes
+ */
