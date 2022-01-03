@@ -10,32 +10,20 @@ body {
     background-color: #262a33 !important;
 }
 
-input[type="checkbox"]:checked ~ label.task {
-    text-decoration: line-through;
-    color: #d5dfe0;
-    transition: 0.5s ease-in-out;
-    user-select: none;
-}
-
-input[type="checkbox"] {
-    vertical-align: middle;
-    position: relative;
-    bottom: 1px;
-    user-select: none;
-}
-
 .vertical-alignment-helper {
     display: table;
     height: 60%;
     width: 100%;
     pointer-events: none;
 }
+
 .vertical-align-center {
     /* To center vertically */
     display: table-cell;
     vertical-align: middle;
     pointer-events: none;
 }
+
 .modal-content {
     /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
     width: inherit;
@@ -49,92 +37,6 @@ input[type="checkbox"] {
 .form-group,
 .form-group > label {
     margin-bottom: 0.5rem;
-}
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    box-shadow: none !important;
-}
-
-.btn {
-    transition: 0.2s ease-in-out;
-}
-
-.btn-text {
-    padding: 0.2rem;
-    font-size: 1rem;
-}
-
-.btn-pos {
-    background-color: #34ffb1;
-    color: #262a33;
-}
-
-.btn-green-text,
-.btn-red-text,
-.btn-add-text,
-.no-task {
-    color: #717a8d;
-}
-
-.btn-neu:hover {
-    background-color: #313846;
-    color: #717a8d;
-}
-
-.btn-red-text:hover {
-    color: #dc4f60;
-}
-
-.btn-green-text:hover {
-    color: #34ffb1;
-}
-
-.btn-plus {
-    margin-top: 2rem;
-    color: #262a33;
-    display: inline-block;
-    border: 2px solid #262a33;
-    border-radius: 100%;
-    font-size: 1.3rem;
-    padding: 0.5em 0.6em;
-    background-color: #34ffb1;
-}
-
-.btn-plus:hover {
-    border: 2px solid #34ffb1;
-    background-color: #262a33;
-    color: #34ffb1;
-}
-
-.task {
-    padding-left: 0.5rem;
-    user-select: none;
-}
-
-.task,
-.no-task {
-    font-size: 1.35rem;
-}
-
-.task:hover {
-    cursor: default;
-}
-
-.task-low {
-    color: #1a8059;
-}
-
-.task-medium {
-    color: #24b37c;
-}
-
-.task-high {
-    color: #34ffb1;
 }
 
 /*

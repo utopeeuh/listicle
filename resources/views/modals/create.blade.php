@@ -5,7 +5,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Add a new task</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <i class="fas fa-times" type="button" class="btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"></i>
                 </div>
                 <form action="/store" method="POST">
                     @csrf
@@ -23,7 +24,7 @@
 
                             <input type="radio" class="btn-check" name="priority" id="medium-create"
                                 autocomplete="off" value="medium">
-                            <label class="btn btn-secondary" for="medium-create">Medium</label>
+                            <label class="btn btn-secondary" for="medium-create">Med</label>
 
                             <input type="radio" class="btn-check" name="priority" id="high-create"
                                 autocomplete="off" value="high">

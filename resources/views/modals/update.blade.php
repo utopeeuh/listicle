@@ -6,14 +6,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Update task</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <i class="fas fa-times" type="button" class="btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"></i>
                 </div>
                 <form action="/update/{{ $note->id }}" method="POST">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" class="form-control" value="{{ $note->title }}" required>
+                            <input type="text" name="title" class="form-control" value="{{ $note->title }}"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="Priority">Priority</label>
@@ -26,7 +28,7 @@
                             <input type="radio" class="btn-check" name="priority"
                                 id="medium-update-{{ $note->id }}" autocomplete="off" value="medium"
                                 {{ $note->priority == 'medium' ? 'checked' : '' }}>
-                            <label class="btn btn-secondary" for="medium-update-{{ $note->id }}">Medium</label>
+                            <label class="btn btn-secondary" for="medium-update-{{ $note->id }}">Med</label>
 
                             <input type="radio" class="btn-check" name="priority"
                                 id="high-update-{{ $note->id }}" autocomplete="off" value="high"

@@ -6,15 +6,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Are you sure?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <i class="fas fa-times" type="button" class="btn-close-modal" data-bs-dismiss="modal"
+                        aria-label="Close"></i>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body modal-text">
                     Use the checkbox instead to declare you've finished this task!
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
                     <a href="/destroy/{{ $note->id }}">
-                        <div class="btn btn-danger">
+                        <div class="btn btn-secondary">
                             Yes
                         </div>
                     </a>

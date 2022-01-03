@@ -1,0 +1,26 @@
+.task {
+    padding-left: 0.5rem;
+    user-select: none;
+    word-break: break-all;
+}
+
+.task,
+.no-task {
+    font-size: 1.35rem;
+}
+
+.task:hover {
+    cursor: default;
+}
+
+.task-low {
+    color: #1a8059;
+}
+
+.task-medium {
+    color: #24b37c;
+}
+
+.task-high {
+    color: #34ffb1;
+}

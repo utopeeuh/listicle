@@ -7,7 +7,7 @@
     <div class="container p-5">
         @if ($notes->count() > 0)
             <div class="row justify-content-center align-items-center mb-4">
-                <div class="col-md-5">
+                <div class="col-md-9">
                     <button type="button" class="btn btn-text btn-green-text" data-bs-toggle="modal"
                         data-bs-target="#create-modal">
                         Add new task
@@ -22,7 +22,7 @@
 
         @forelse ($notes as $note)
             <div class="row justify-content-center align-items-center mb-1">
-                <div class="col-md-4 align-items-center task-cb">
+                <div class="col-md-8 col-sm-12 align-items-center task-cb">
                     <input type="checkbox" id="task-{{ $note->id }}-cb" name="task-{{ $note->id }}-cb"
                         onclick="isdone({{ $note->id }});" {{ $note->isdone == 1 ? 'checked' : '' }} />
                     <label class="cb-check" for="task-{{ $note->id }}-cb"></label>
@@ -43,7 +43,6 @@
             @include('modals.update')
             @include('modals.delete')
         @empty
-
             <div class="d-flex flex-column align-items-center justify-content-center" style="height: 40%">
                 <div class="no-task mb-2 text-center">
                     No tasks found, start by<br>clicking the button below

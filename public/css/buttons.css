@@ -1,0 +1,59 @@
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    box-shadow: none !important;
+}
+
+.btn {
+    transition: 0.2s ease-in-out;
+}
+
+.btn-text {
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+
+.btn-pos {
+    background-color: #34ffb1;
+    color: #262a33;
+}
+
+.btn-green-text,
+.btn-red-text,
+.btn-add-text,
+.no-task {
+    color: #717a8d;
+}
+
+.btn-neu:hover {
+    background-color: #313846;
+    color: #717a8d;
+}
+
+.btn-red-text:hover {
+    color: #dc4f60;
+}
+
+.btn-green-text:hover {
+    color: #34ffb1;
+}
+
+.btn-plus {
+    margin-top: 2rem;
+    color: #262a33;
+    display: inline-block;
+    border: 2px solid #262a33;
+    border-radius: 100%;
+    font-size: 1.3rem;
+    padding: 0.5em 0.6em;
+    background-color: #34ffb1;
+}
+
+.btn-plus:hover {
+    border: 2px solid #34ffb1;
+    background-color: #262a33;
+    color: #34ffb1;
+}

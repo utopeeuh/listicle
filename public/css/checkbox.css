@@ -3,6 +3,10 @@
     cursor: pointer;
     user-select: none;
     font-size: 1rem;
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+    user-select: none;
 }
 .task-cb input[type="checkbox"] + label:before {
     font-family: "Font Awesome 5 Free";
@@ -16,6 +20,13 @@
     content: "\f14a";
     text-decoration: none;
     font-weight: 900;
+    user-select: none;
+}
+
+.task-cb input[type="checkbox"]:checked ~ label.task {
+    text-decoration: line-through;
+    color: #d5dfe0;
+    transition: 0.5s ease-in-out;
     user-select: none;
 }
 

@@ -10,6 +10,11 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="{{ URL::asset('/css/listicle.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/css/checkbox.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/buttons.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/tasks.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/header-footer.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/auth.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/modal.css') }}" rel="stylesheet">
 
     <title>Listicle</title>
 </head>

@@ -1,0 +1,91 @@
+.modal-content {
+    background-color: #262a33;
+}
+
+.modal-content > div,
+.modal-footer {
+    border: none;
+}
+
+.modal-body {
+    padding-bottom: 0 !important;
+}
+
+.modal-header > i {
+    color: #34ffb1 !important;
+    font-size: 1.2rem;
+}
+
+.modal-footer {
+    padding-top: 0 !important;
+}
+
+.form-group > label,
+.modal-title {
+    color: #34ffb1;
+}
+
+.form-group > input {
+    box-shadow: none !important;
+}
+
+.form-group > input[type="radio"] ~ label {
+    color: #3c4453;
+    background-color: #262a33;
+    border: 1px solid #3c4453;
+    width: 70px;
+    border-radius: 30px;
+}
+
+.form-group > input[type="radio"]:focus + label {
+    box-shadow: none !important;
+}
+
+.form-group > input[type="radio"]:checked + label,
+.form-group > input[type="radio"]:active + label,
+.modal-footer > button.btn-primary {
+    color: #34ffb1;
+    border: 1px solid #34ffb1;
+    background-color: #262a33;
+}
+
+.form-group > input[type="text"] {
+    background-color: #21242c;
+    border: 1px solid #34ffb1;
+    color: #d5dfe0;
+}
+
+.modal-text {
+    color: #d5dfe0;
+    margin-bottom: 1rem;
+}
+
+.modal-footer > button.btn-secondary,
+.modal-footer > a > .btn-secondary {
+    color: #dc4f60;
+    background-color: #262a33;
+    border: 1px solid #dc4f60;
+}
+
+.modal-footer > button.btn-secondary:hover,
+.modal-footer > a > .btn-secondary:hover {
+    background-color: #dc4f60;
+    color: #d5dfe0;
+}
+
+.modal-footer > button.btn-primary:hover {
+    background-color: #34ffb1;
+    color: #262a33;
+}
+
+.btn-pos {
+    color: #34ffb1;
+    color: #24b37c;
+    color: #1a8059;
+
+    color: #262a33;
+    color: #313846;
+    color: #717a8d;
+
+    color: #dc4f60;
+}
