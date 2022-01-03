@@ -12,9 +12,11 @@
     <link href="{{ URL::asset('/css/checkbox.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/css/buttons.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/css/tasks.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('/css/header-footer.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('/css/header.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/css/auth.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/css/modal.css') }}" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="{{ URL::asset('/favicon/favicon-32x32.png') }}" sizes="16x16" />
 
     <title>Listicle</title>
 </head>

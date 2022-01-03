@@ -1,0 +1,60 @@
+a.navbar-brand {
+    font-size: 2.5rem !important;
+    color: pink;
+}
+
+nav {
+    padding: 2rem !important;
+}
+
+.green {
+    color: #34ffb1;
+}
+
+.white {
+    color: #d5dfe0;
+}
+
+.grey,
+#navbarDropdown,
+.nav-link {
+    color: #717a8d !important;
+}
+
+#navbarDropdown:hover,
+.nav-link:hover {
+    color: #34ffb1 !important;
+}
+
+#navbarDropdown > i,
+.nav-link > i {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.dropdown-menu {
+    background-color: #313846;
+    border: none;
+}
+
+.dropdown-item {
+    color: #34ffb1;
+}
+
+.dropdown-item:hover {
+    color: #313846;
+    background-color: #34ffb1;
+}
+
+.btn-pos {
+    color: #34ffb1;
+    color: #24b37c;
+    color: #1a8059;
+
+    color: #262a33;
+    color: #313846;
+    color: #717a8d;
+    color: #d5dfe0;
+
+    color: #dc4f60;
+}
