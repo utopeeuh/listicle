@@ -1,0 +1,24 @@
+.task-cb input[type="checkbox"] {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+.task-cb input[type="checkbox"] + label:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c8";
+    cursor: pointer;
+    font-weight: 400;
+    color: #34ffb1;
+    user-select: none;
+}
+.task-cb input[type="checkbox"]:checked + label:before {
+    content: "\f14a";
+    text-decoration: none;
+    font-weight: 900;
+    user-select: none;
+}
+
+.cb-check {
+    user-select: none;
+}
